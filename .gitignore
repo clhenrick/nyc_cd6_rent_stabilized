@@ -1,7 +1,7 @@
 qgis/
 notes/
 scripts/
-data/
+/Users/chrislhenrick/development/nyc_district6_rent_stabl/data
 *test*
 .DS_Store
 bower_components
