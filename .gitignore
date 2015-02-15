@@ -1,0 +1,5 @@
+qgis/
+notes/
+scripts/
+*test*
+.DS_Store
