@@ -1,0 +1,27 @@
+{
+  "name": "nyc_council06_rent_stabl",
+  "version": "0.1.0",
+  "authors": [
+    "Chris Henrick <chrishenrick@gmail.com>"
+  ],
+  "description": "visualizing rent stabilization loss in nyc council 06",
+  "main": "js/main.js",
+  "keywords": [
+    "nyc",
+    "rent",
+    "stabilization"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "leaflet": "~0.7.3"
+  }
+}

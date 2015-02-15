@@ -1,0 +1,93 @@
+/*code credit: Rich Donohue and Carl Sack for Time Series Proportional Symbol Maps with Leaflet and JQuery
+http://geography.wisc.edu/cartography/tutorials/*/
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-top: 3px;
+}
+
+h2,div, span {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#title {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 1000;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 300px;
+    margin: 0;
+    padding: 3px;
+    text-align: center;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;     
+}
+
+#title .h1 {    
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+
+#title .h3 {
+    margin: 0 0 5px 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    /*margin: 15px auto 15px;*/
+}
+
+.legend, .temporal-legend {
+    padding: 6px 10px;
+    font: 14px/16px Helvetica, Arial,  sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+#legendTitle {
+    text-align: center;
+    margin-bottom: 10px;
+    font-variant: small-caps;
+}
+.symbolsContainer {
+    padding: 5px;
+    float: left;
+    margin-left: 50px;
+}
+.legendCircle {
+     border-radius:50%; 
+     border: 1px solid #537898; 
+     background: #BF0D00;
+     opacity: 0.4;
+     display: inline-block;
+}
+.legendValue {
+    position: absolute;
+    left: 100px;
+}
+.range-slider {
+    width: 250px;
+}
+.temporal-legend {
+    font-size: 1.2em;
+    text-align: center;
+}
