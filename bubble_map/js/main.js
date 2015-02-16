@@ -8,23 +8,24 @@ $(document).ready(function(){
   var map = L.map('map', {
       center : [40.781256,-73.978179],
       zoom : 15,
-      maxZoom : 17
+      maxZoom : 19
     });
 
-  L.tileLayer(
-    'http://{s}.acetate.geoiq.com/tiles/acetate/{z}/{x}/{y}.png', {
-      attribution: 'Acetate tileset from GeoIQ'
-  }).addTo(map);  
+  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+  });
 
-    $.getJSON("data/units_rent_stabl.geojson")
-        .done(function(data) {
-          // console.log('data: ', data);
-          var info = processData(data);
-          createPropSymbols(info.timestamps, data);
-          createLegend(info.min,info.max);
-          createSliderUI(info.timestamps);
-        })
-        .fail(function() { alert("There has been a problem loading the data.")});
+  map.addLayer(layer);  
+
+  $.getJSON("data/units_rent_stabl.geojson")
+      .done(function(data) {
+        // console.log('data: ', data);
+        var info = processData(data);
+        createPropSymbols(info.timestamps, data);
+        createLegend(info.min,info.max);
+        createSliderUI(info.timestamps);
+      })
+      .fail(function() { alert("There has been a problem loading the data.")});
   
   function processData(data) {
     // console.log("the data is: ", data);
